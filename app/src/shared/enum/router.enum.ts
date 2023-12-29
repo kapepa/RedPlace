@@ -1,5 +1,10 @@
 export enum RouterEnum {
   HOME = "/",
   PUBLIC = "/public",
-  DASHBOARD = "/dashboard"
+  TASKS = "/tasks",
+  TIMER = "/timer",
+  HABITS = "/habits",
+  MANAGEMENT = "/management",
+  SETTINGS = "/settings",
+  DASHBOARD = "/dashboard",
 }
