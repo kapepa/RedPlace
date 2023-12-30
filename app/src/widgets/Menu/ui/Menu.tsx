@@ -18,11 +18,11 @@ const Menu: FC<MenuProps> = (props) => {
         <ImgIco
           src={src}
           alt={alt}
-          height={30}
-          width={30} 
+          height={25}
+          width={25} 
         />
         <span
-          className={styles.menu__text}
+          className="text-xl"
         >{text}</span>
       </div>
     )
