@@ -1,16 +1,14 @@
-import Image from 'next/image'
 import { FC, createElement } from 'react'
 import * as lucide from "lucide-react";
 
 enum ImgSRC {
+  Home = "Home",
+  Timer = "Timer",
+  KanbanSquare = "KanbanSquare",
   CalendarDays = "CalendarDays",
-  // CalendarLines = "calendar-lines.svg",
-  // CircleDashed = "circle-dashed.svg",
-  // LayoutFluid = "layout-fluid.svg",
-  // Settings = "settings.svg",
-  // SquareKanban = "square-kanban.svg",
-  // TimeForward = "time-forward.svg",
-  // HouseChimney = "house-chimney.svg",
+  LayoutDashboard = "LayoutDashboard",
+  CircleDashed = "CircleDashed",
+  Settings = "Settings",
 }
 
 interface ImgIcoProps {
