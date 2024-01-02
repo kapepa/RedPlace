@@ -3,7 +3,7 @@ import styles from "./Menu.module.scss";
 import classNames from "classnames"
 import { MenuItem } from "@/shared/ui/MenuItem";
 import { RouterEnum } from "@/shared/enum/router.enum";
-import { ImgIco, ImgSRC } from "@/shared/ui/ImgIco";
+import { IcoName, ImgIco } from "@/shared/ui/ImgIco";
 
 interface MenuProps {
   className?: string,
@@ -12,7 +12,7 @@ interface MenuProps {
 const Menu: FC<MenuProps> = (props) => {
   const { className } = props;
 
-  const InnerChildren = ({ ico,text }: { ico: keyof typeof ImgSRC, text: string }) => {
+  const InnerChildren = ({ ico,text }: { ico: keyof typeof IcoName, text: string }) => {
     return (
       <div className={classNames("flex justify-center items-center gap-2")}>
         <ImgIco

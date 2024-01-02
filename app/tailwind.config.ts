@@ -18,9 +18,17 @@ const config: Config = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       gap: {
-        '2': '1rem',
-        '4': '2rem',
+        '2': '0.5rem',
+        '4': '1rem',
+        '6': '2rem',
       },
+      fontSize: {
+        '3xl': '3rem',
+      },
+      colors: {
+        primary: "#8548EF",
+        secondary: "F97912",
+      }
     },
   },
   plugins: [],

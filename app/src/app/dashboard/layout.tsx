@@ -4,10 +4,14 @@ import { ReactNode } from "react"
 
 export default function  DashboardLayout ({children}: {children: ReactNode}) {
   return (
-    <div>
+    <div 
+      className="grid gap-6"
+      style={
+        { gridTemplateColumns: '1fr 6fr' }
+      }
+    >
       <Sidebar/>
-      <ProfileSection/>
-      <main>
+      <main className="p-8">
         {children}
       </main>
     </div>

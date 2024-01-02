@@ -1,19 +1,20 @@
 import { FC, createElement } from 'react'
 import * as lucide from "lucide-react";
 
-enum ImgSRC {
+enum IcoName {
   Home = "Home",
   Timer = "Timer",
+  Sprout = "Sprout",
+  Settings = "Settings",
   KanbanSquare = "KanbanSquare",
   CalendarDays = "CalendarDays",
   LayoutDashboard = "LayoutDashboard",
   CircleDashed = "CircleDashed",
-  Settings = "Settings",
 }
 
 interface ImgIcoProps {
   className?: string,
-  ico: keyof typeof ImgSRC,
+  ico: keyof typeof IcoName,
   width: number,
   height: number,
 }
@@ -30,4 +31,4 @@ const ImgIco: FC<ImgIcoProps> = (props) => {
 }
 
 export { ImgIco }
-export type {ImgSRC}
+export type {IcoName}
