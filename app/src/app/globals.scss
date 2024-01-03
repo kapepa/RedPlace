@@ -10,6 +10,7 @@
 
   --primary: #8548EF;
   --secondary: #F97912;
+  --border: rgba(222,222,222,.08)
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,7 +21,14 @@
 
     --primary: #8548EF;
     --secondary: #F97912;
+    --border: rgba(222,222,222,.08)
   }
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -40,4 +48,8 @@ body {
 
 .fill-secondary {
   stroke: var(--secondary);
+}
+
+.space-nowrap{
+  white-space: nowrap;
 }

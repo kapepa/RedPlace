@@ -15,10 +15,10 @@ const Sidebar: FC<SidebarProps> = (props) => {
   return (
     <aside className={classNames(
       className, 
-      "flex flex-col gap-2 border-solid border-r-2 border-sky-white-color p-8"
+      "flex flex-col gap-2 border-solid border-r-2 border-border"
     )}>
-      <Logo/>
-      <Menu/>
+      <Logo className="px-8 py-8 border-solid border-b-2 border-border"/>
+      <Menu className="py-1 mx-2"/>
     </aside>
   )
 }

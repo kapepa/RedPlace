@@ -14,7 +14,13 @@ const Menu: FC<MenuProps> = (props) => {
 
   const InnerChildren = ({ ico,text }: { ico: keyof typeof IcoName, text: string }) => {
     return (
-      <div className={classNames("flex justify-center items-center gap-2")}>
+      <div 
+        className={classNames("flex items-center gap-2 hover:bg-border px-8 py-1 rounded-lg")}
+        style={{
+          width: "100%",
+          alignItems: "start"
+        }}
+      >
         <ImgIco
           ico={ico}
           height={25}
@@ -28,39 +34,32 @@ const Menu: FC<MenuProps> = (props) => {
   }
 
   return (
-    <nav className={classNames(className, styles.menu)}>
+    <nav className={classNames("flex gap-4", className, styles.menu)}>
       <MenuItem 
-        className={styles.menu__items} 
         href={RouterEnum.HOME} 
-        children={InnerChildren({ ico: "Home", text: "Home" })} 
+        children={InnerChildren({ ico: "Home", text: "Home" })}
       />
       <MenuItem 
-        className={styles.menu__items} 
         href={RouterEnum.DASHBOARD} 
         children={InnerChildren({ ico: "KanbanSquare", text: "Dashboard" })} 
       />
       <MenuItem 
-        className={styles.menu__items} 
         href={RouterEnum.TASKS} 
         children={InnerChildren({ ico: "LayoutDashboard", text: "Tasks" })} 
       />
       <MenuItem 
-        className={styles.menu__items} 
         href={RouterEnum.TIMER} 
         children={InnerChildren({ ico: "Timer", text: "Timer" })} 
       />
       <MenuItem 
-        className={styles.menu__items} 
         href={RouterEnum.HABITS} 
         children={InnerChildren({ ico: "CircleDashed", text: "Habits" })} 
       />     
       <MenuItem 
-        className={styles.menu__items} 
         href={RouterEnum.MANAGEMENT} 
         children={InnerChildren({ ico: "CalendarDays", text: "Management" })} 
       />   
       <MenuItem 
-        className={styles.menu__items} 
         href={RouterEnum.SETTINGS} 
         children={InnerChildren({ ico: "Settings", text: "Settings" })} 
       /> 

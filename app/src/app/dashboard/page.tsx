@@ -1,3 +1,4 @@
+import { Dashboard } from "@/features/Dashboard"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -7,6 +8,6 @@ export const metadata: Metadata = {
 
 export default function DashboardPage () {
   return (
-    <div>DashboardPage</div>
+    <Dashboard/>
   )
 }
