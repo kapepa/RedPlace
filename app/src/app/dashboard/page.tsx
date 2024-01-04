@@ -1,4 +1,5 @@
 import { Dashboard } from "@/features/Dashboard"
+import { Heading } from "@/widgets/Heading"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -8,6 +9,9 @@ export const metadata: Metadata = {
 
 export default function DashboardPage () {
   return (
-    <Dashboard/>
+    <div className="flex flex-col p-8 ">
+      <Heading title="Dashboard"/>
+      <Dashboard/>
+    </div>
   )
 }

@@ -1,9 +1,6 @@
 .menu{
   display: flex;
   flex-direction: column;
-  &__items{
-    margin: 10px;
-  }
   &__info{
     gap: 10px;
   }

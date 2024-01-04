@@ -1,4 +1,3 @@
-import { ImgIco, IcoName } from "./ImgIco";
+import { ImgIco } from "./ImgIco";
 
 export { ImgIco }
-export type { IcoName }

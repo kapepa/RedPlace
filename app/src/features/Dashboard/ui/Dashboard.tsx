@@ -11,7 +11,7 @@ const Dashboard: FC<DashboardProps> = (props) => {
 
   return (
     <div className={classNames(className)}>
-      <Button color="Default">Button</Button>
+      <Button color="OutlinedDefault">Button</Button>
     </div>
   )
 }

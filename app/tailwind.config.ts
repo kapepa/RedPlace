@@ -1,6 +1,7 @@
 import type { Config } from 'tailwindcss'
 
 const config: Config = {
+  darkMode: "class",
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -33,6 +34,7 @@ const config: Config = {
       padding: {
         "py-1":  "0.5rem",
         "py-8":  "2rem",
+        "px-4": "1rem",
         "px-8": "2rem"
       },
       margin: {
