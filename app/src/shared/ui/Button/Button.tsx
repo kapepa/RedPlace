@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { FC, ReactNode } from "react";
+import { FC, ReactNode, ButtonHTMLAttributes } from "react";
 
 enum eButton {
   Default = "Default",
@@ -22,18 +22,21 @@ enum eButton {
   OutlinedOrange = "OutlinedOrange",
 }
 
-interface ButtonProps {
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
   className?: string,
   color: keyof typeof eButton,
   children: ReactNode
 }
 
 const Button: FC<ButtonProps> = (props) => {
-  const {className, color, children} = props;
+  const {className, color, children, ...otherProps} = props;
 
   const BtnFrame = (classes: string) => {
     return (
-      <button className={classNames(classes, className)}>
+      <button 
+        className={classNames(classes, className)}
+        {...otherProps}
+      >
         {children}
       </button>
     )

@@ -4,14 +4,18 @@ import './globals.scss'
 import classNames from 'classnames';
 
 const inter = Inter({ 
-  subsets: ['latin'] 
+  weight: ['200', '300','400', '500', '600', '700'],
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-latin',
 });
 
 const noto = Noto_Sans({
-  weight: ['400', '700'],
+  weight: ['200', '300','400', '500', '600', '700'],
   style: ['normal', 'italic'],
-  subsets: ['latin'],
-  display: 'swap',
+  subsets: ['latin', "cyrillic"],
+  
+  variable: '--font-noto',
 })
 
 
@@ -27,7 +31,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={classNames(inter.className, noto.className)}>{children}</body>
+      <body className={classNames(noto.className, inter.className)}>{children}</body>
     </html>
   )
 }

@@ -30,6 +30,7 @@ const config: Config = {
         primary: "#8548EF",
         secondary: "F97912",
         border: "rgba(255,255,255,.08)",
+        sidebar: "#0E0F0F"
       },
       padding: {
         "py-1":  "0.5rem",
@@ -39,6 +40,10 @@ const config: Config = {
       },
       margin: {
         "mx-2": "1rem"
+      },
+      fontFamily: {
+        noto: ['var(--font-noto)'],
+        latin: ['var(--font-latin)'],
       },
       width: {
         "1p": "1%",
@@ -140,10 +145,6 @@ const config: Config = {
         "97p": "97%",
         "98p": "98%",
         "99p": "99%",
-      },
-      fontFamily: {
-        poppins: ["Poppins", "sans-serif"],
-        dm: ["DM Sans", "sans-serif"],
       },
       boxShadow: {
         "3xl": "14px 17px 40px 4px",

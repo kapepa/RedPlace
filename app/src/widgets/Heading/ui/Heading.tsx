@@ -11,7 +11,7 @@ const Heading: FC<HeadingProps> = (props) => {
 
   return (
     <div className={classNames("border-solid border-b-2 border-border", className)}>
-      <h1 className="text-xl">{title}</h1>
+      <h1 className="text-xl font-noto font-medium">{title}</h1>
       <br />
     </div>
   )
