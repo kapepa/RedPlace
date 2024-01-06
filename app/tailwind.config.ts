@@ -27,7 +27,7 @@ const config: Config = {
         '3xl': '3rem',
       },
       colors: {
-        primary: "#8548EF",
+        primary: "#422AFB",
         secondary: "F97912",
         border: "rgba(255,255,255,.08)",
         sidebar: "#0E0F0F"

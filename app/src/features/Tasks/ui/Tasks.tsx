@@ -51,7 +51,7 @@ const Tasks: FC<TasksProps> = memo(
             children={<ImgIco ico={Kanban} height={30} width={30} />} 
           />
         </div>
-        <div>
+        <div className="pt-2">
           {template}
         </div>
       </div>

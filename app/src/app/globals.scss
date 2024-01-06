@@ -7,7 +7,7 @@
   --background-rgb: 214, 219, 220;
   --white-color: #fff;
 
-  --primary: #8548EF;
+  --primary: #422AFB;
   --secondary: #F97912;
   --border: rgba(222,222,222,.08)
 }
@@ -17,7 +17,7 @@
     --foreground-rgb: 255, 255, 255;
     --background-rgb: 0, 0, 0;
 
-    --primary: #8548EF;
+    --primary: #422AFB;
     --secondary: #F97912;
     --border: rgba(222,222,222,.08)
   }
@@ -46,4 +46,19 @@ body {
 
 .space-nowrap{
   white-space: nowrap;
+}
+
+input.defaultCheckbox::before {
+	content: url(/svg/checked.svg); 
+	color: white;
+	opacity: 0; 
+	height: 16px; 
+	width: 16px;
+	position: absolute; 
+	left: 50%;
+	transform: translate(-50%, -2px);
+} 
+
+input:checked.defaultCheckbox::before { 
+	opacity: 1;
 }
