@@ -1,0 +1,11 @@
+.td_row {
+  @apply cursor-pointer -ml-4;
+  &__ico {
+    @apply opacity-0 transition-opacity;
+  }
+  &:hover {
+    .td_row__ico {
+      @apply opacity-80;
+    }
+  }
+}

@@ -5,7 +5,9 @@
       & > th, td {
         @apply px-4 py-4 border-solid border-border border-2;
         &:first-child{
-          @apply border-l-0 w-full
+          @apply border-l-0;
+          max-width: 50%;
+          // padding-left: 0;
         }
         &:last-child {
           @apply border-r-0
@@ -27,4 +29,5 @@
       }
     }
   }
+
 }
