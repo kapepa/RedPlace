@@ -1,7 +1,13 @@
+'use client'
+
 import classNames from "classnames";
-import { FC } from "react";
+import { FC, useState } from "react";
 import styles from "./TaskList.module.scss";
 import { DraggableRow } from "@/shared/ui/DraggableRow";
+import { DropTBody } from "@/shared/ui/DropTBody";
+import { tTask } from "@/shared/types/task.types";
+import { DndProvider } from "react-dnd";
+import { HTML5Backend } from "react-dnd-html5-backend";
 
 interface TaskListProps {
   className?: string,
@@ -10,27 +16,27 @@ interface TaskListProps {
 const TaskList: FC<TaskListProps> = (props) => {
   const {className} = props;
 
+  const tasks: tTask[] = [
+    { id: "1", text: "finish user registration", date: new Date(), priority: "High" },
+    { id: "2", text: "start user delete", date: new Date(), priority: "High" },
+  ]
+
   return (
-    <table className={classNames(styles.task_list, className)}>
-      <thead className={classNames(styles.task_list__row, styles.task_list__head)}>
-        <tr >
-          <th>Task name</th>
-          <th>Due date</th>
-          <th>Priority</th>
-        </tr>
-      </thead>
-      <tbody className={classNames(styles.task_list__row, styles.task_list__body)}>
-        <DraggableRow 
-          text="finish user registration" 
-          date={""}
+    <DndProvider backend={HTML5Backend}>
+      <table className={classNames(styles.task_list, className)}>
+        <thead className={classNames(styles.task_list__row, styles.task_list__head)}>
+          <tr >
+            <th>Task name</th>
+            <th>Due date</th>
+            <th>Priority</th>
+          </tr>
+        </thead>
+        <DropTBody 
+          tasks={tasks}
+          className={classNames(styles.task_list__row, styles.task_list__body)}
         />
-        {/* <tr className={styles.task_list__tr}>
-          <td colSpan={3}>
-            To Do
-          </td>
-        </tr> */}
-      </tbody>
-    </table>
+      </table>
+    </DndProvider>
   )
 }
 
