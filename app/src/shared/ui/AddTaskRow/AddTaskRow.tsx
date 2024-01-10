@@ -18,7 +18,7 @@ const AddTaskRow: FC<AddTaskRowProps> = memo((props) => {
   return (
     <tr className={classNames(className)}>
       <td>
-        <button onClick={clickAdd}>Add task...</button>
+        <button className="italic" onClick={clickAdd}>Add task...</button>
       </td>
     </tr>
   )
