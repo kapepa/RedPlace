@@ -18,6 +18,7 @@ const TaskList: FC<TaskListProps> = (props) => {
   const task: tTask[] = [
     { id: "1", text: "finish user registration! You can to use all property!", date: new Date(), priority: "High" },
     { id: "2", text: "start user delete", date: new Date(), priority: "High" },
+    { id: "3", text: "update user", date: new Date(), priority: "High" },
   ]
 
   return (
